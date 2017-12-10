@@ -1,6 +1,6 @@
 ﻿namespace _CLsearch_gui
 {
-    partial class Form_results
+    partial class Form_help
     {
         /// <summary>
         /// Required designer variable.
@@ -28,65 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_results));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_help));
+            this.richTextBox_help = new System.Windows.Forms.RichTextBox();
             this.button_close = new System.Windows.Forms.Button();
-            this.textBox_results = new System.Windows.Forms.TextBox();
-            this.button_write = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // richTextBox_help
+            // 
+            this.richTextBox_help.BackColor = System.Drawing.SystemColors.Window;
+            this.richTextBox_help.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBox_help.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_help.Location = new System.Drawing.Point(12, 12);
+            this.richTextBox_help.Name = "richTextBox_help";
+            this.richTextBox_help.ReadOnly = true;
+            this.richTextBox_help.Size = new System.Drawing.Size(502, 387);
+            this.richTextBox_help.TabIndex = 0;
+            this.richTextBox_help.Text = "";
             // 
             // button_close
             // 
-            this.button_close.Location = new System.Drawing.Point(249, 503);
+            this.button_close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button_close.Location = new System.Drawing.Point(439, 405);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(75, 23);
-            this.button_close.TabIndex = 0;
+            this.button_close.TabIndex = 1;
             this.button_close.Text = "Close";
             this.button_close.UseVisualStyleBackColor = true;
-            this.button_close.Click += new System.EventHandler(this.button1_Click);
+            this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
-            // textBox_results
+            // Form_help
             // 
-            this.textBox_results.Location = new System.Drawing.Point(13, 13);
-            this.textBox_results.Multiline = true;
-            this.textBox_results.Name = "textBox_results";
-            this.textBox_results.ReadOnly = true;
-            this.textBox_results.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_results.Size = new System.Drawing.Size(311, 484);
-            this.textBox_results.TabIndex = 1;
-            // 
-            // button_write
-            // 
-            this.button_write.Location = new System.Drawing.Point(168, 503);
-            this.button_write.Name = "button_write";
-            this.button_write.Size = new System.Drawing.Size(75, 23);
-            this.button_write.TabIndex = 2;
-            this.button_write.Text = "Write to file";
-            this.button_write.UseVisualStyleBackColor = true;
-            this.button_write.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // Form_results
-            // 
+            this.AcceptButton = this.button_close;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 534);
-            this.Controls.Add(this.button_write);
-            this.Controls.Add(this.textBox_results);
+            this.CancelButton = this.button_close;
+            this.ClientSize = new System.Drawing.Size(526, 437);
             this.Controls.Add(this.button_close);
+            this.Controls.Add(this.richTextBox_help);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form_results";
+            this.Name = "Form_help";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Search Results";
+            this.Text = "Help";
+            this.Load += new System.EventHandler(this.Form_help_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.RichTextBox richTextBox_help;
         private System.Windows.Forms.Button button_close;
-        private System.Windows.Forms.TextBox textBox_results;
-        private System.Windows.Forms.Button button_write;
     }
 }

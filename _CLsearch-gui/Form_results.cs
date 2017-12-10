@@ -55,6 +55,7 @@ namespace _CLsearch_gui
                     }
                 }
             }
+            MessageBox.Show("The file '_CLsearch.txt' has been saved in the following location:\n" + file, "_CLsearch-gui  ::  File saved!");
         }
     }
 }

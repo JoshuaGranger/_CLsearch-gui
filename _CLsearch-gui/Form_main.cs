@@ -13,7 +13,7 @@ namespace _CLsearch_gui
 {
     public partial class Form_main : Form
     {
-        string term_start_text = "TAG1, TAG2, TAG3, ...";
+        string term_start_text = "TAG1, TAG2, TAG3, etc.";
 
         public Form_main()
         {
@@ -88,13 +88,13 @@ namespace _CLsearch_gui
             if ((textBox_terms.Text == "") || (textBox_terms.Text == term_start_text))
             {
                 output.Add("Search not completed: no tags to search for.");
-                MessageBox.Show("Search not completed: no tags to search for.");
+                MessageBox.Show("Search not completed: no tags to search for.", "_CLsearch-gui  ::  Oops!");
             }
             // Are there .CL files in the selected directory?
             else if (!clFilesPresent(folderBrowserDialog1.SelectedPath))
             {
                 output.Add("Search not completed: no \".CL\" files are present in this directory.");
-                MessageBox.Show("Search not completed: no \".CL\" files are present in this directory.");
+                MessageBox.Show("Search not completed: no \".CL\" files are present in this directory.", "_CLsearch-gui  ::  Oops!");
             }
             // If all is good, continue to search
             else
@@ -158,6 +158,12 @@ namespace _CLsearch_gui
         {
             if (Directory.Exists(textBox_cldir.Text))
                 folderBrowserDialog1.SelectedPath = textBox_cldir.Text;
+        }
+
+        private void button_help_Click(object sender, EventArgs e)
+        {
+            Form_help HelpForm = new Form_help();
+            HelpForm.ShowDialog();
         }
     }
 }
