@@ -20,7 +20,9 @@ namespace _CLsearch_gui
             InitializeComponent();
 
             // Preliminary Setup
-            textBox_cldir.Text = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            //textBox_cldir.Text = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            textBox_cldir.Text = Application.StartupPath;
+
             folderBrowserDialog1.SelectedPath = textBox_cldir.Text;
             textBox_terms.Text = term_start_text;
             button_seldir.Select();
